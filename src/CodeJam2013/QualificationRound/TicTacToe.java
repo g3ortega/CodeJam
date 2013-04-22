@@ -16,11 +16,23 @@ public class TicTacToe {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        char matriz[][]={{'X','X','0','T'},{'.','.','.','.'},{'0','0','.','.'},{'.','.','.','.'}};
-        char matriz1[][]={{'X','X','.','T'},{'.','.','.','.'},{'0','0','0','T'},{'.','.','.','.'}};
-        char matriz2[][]={{'X','X','X','T'},{'.','.','.','.'},{'0','0','.','.'},{'.','.','.','.'}};
-        char matriz3[][]={{'X','X','X','T'},{'.','.','.','.'},{'0','0','.','.'},{'.','.','.','.'}};
-        Board tablero=new Board(matriz);
+        char matriz[][]={{'X','X','X','X'},
+                         {'Y','.','.','.'},
+                         {'Y','0','.','.'},
+                         {'T','.','.','.'}};//X win
+        char matriz1[][]={{'Y','Y','Y','T'},
+                          {'.','.','.','.'},
+                          {'Y','Y','X','T'},
+                          {'.','.','.','.'}};//y win
+        char matriz2[][]={{'X','X','Y','T'},
+                          {'Y','Y','X','X'},
+                          {'X','Y','Y','Y'},
+                          {'X','X','Y','X'}};//Draw
+        char matriz3[][]={{'X','X','0','T'},
+                          {'X','.','.','.'},
+                          {'X','0','.','.'},
+                          {'Y','.','.','.'}};//Not finished
+        Board tablero=new Board(matriz2);
         System.out.println(tablero.ObtenerEstado());
     }
 }
