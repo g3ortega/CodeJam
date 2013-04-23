@@ -16,11 +16,11 @@ final char vacio='.';
 
 char[][] matriz;
 
-public Board(char m[][]){
-matriz=m;
+public Board(){
 }
 
-public String ObtenerEstado(){
+public String ObtenerEstado(char m[][]){
+    matriz=m;
     String estado="";
     if(GanaHorizontal(x)||GanaVertical(x)||GanaDiagonal(x)){
         estado="X win";
